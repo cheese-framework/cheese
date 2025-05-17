@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- WebView 相关配置 -->
+    <webview-config>
+        <!-- 允许 JavaScript -->
+        <allow-javascript value="true" />
+
+        <!-- 允许本地文件访问 -->
+        <allow-file-access value="true" />
+
+        <!-- 允许混合内容（HTTP 和 HTTPS 混合） -->
+        <allow-mixed-content value="true" />
+
+        <!-- 允许通过 file:// URIs 加载资源 -->
+        <allow-file-access-from-file value="true" />
+
+        <!-- 允许通过 http:// URIs 加载资源 -->
+        <allow-intent href="http:*/*" />
+        <allow-intent href="https:*/*" />
+
+        <!-- 允许在 WebView 中加载 http 和 https 资源 -->
+        <access origin="http://*" subdomains="true" />
+        <access origin="https://*" subdomains="true" />
+    </webview-config>
+
+    <!-- 其他配置项 -->
+</config>

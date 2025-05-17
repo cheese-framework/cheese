@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- 悬浮图标 -->
+    <ImageView
+        android:id="@+id/floatingIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/cheese_icon" />
+
+    <!-- 菜单布局 -->
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/floatingIcon"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <ImageButton
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="开始"
+            android:src="@drawable/run" />
+
+        <ImageButton
+            android:id="@+id/stopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="停止"
+            android:src="@drawable/stop" />
+    </LinearLayout>
+    <!-- 菜单布局 -->
+    <LinearLayout
+        android:id="@+id/menuLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/floatingIcon"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/runAndStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:contentDescription="Action button"
+            android:src="@drawable/run" />
+
+        <ImageButton
+            android:id="@+id/logcat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:contentDescription="Action button"
+            android:src="@drawable/logcat_icon" />
+
+
+        <ImageButton
+            android:id="@+id/x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:contentDescription="Action button"
+            android:src="@drawable/console_x" />
+    </LinearLayout>
+</RelativeLayout>

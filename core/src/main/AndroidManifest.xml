@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 📱 基础权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/> <!-- 允许程序访问互联网 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!-- 允许程序访问网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> <!-- 允许程序访问 Wi-Fi 网络状态信息 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> <!-- 允许程序改变 Wi-Fi 连接状态 -->
+
+    <!-- 📶 电话与设备状态相关权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/> <!-- 允许程序读取手机状态和身份 -->
+
+
+    <!-- 🗺️ 位置信息权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- 允许程序访问精确位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!-- 允许程序访问大致位置信息 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/> <!-- 允许程序在前台服务中访问位置信息 -->
+
+    <!-- 🎵 音频与录音权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/> <!-- 允许程序修改音频设置 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/> <!-- 允许程序录音 -->
+
+    <!-- 💾 存储权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> <!-- 允许程序读取外部存储 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序写入外部存储（受限于Scoped Storage） -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> <!-- 允许程序管理外部存储 -->
+
+    <!-- 📊 应用管理权限 -->
+    <uses-permission android:name="com.android.permission.GET_INSTALLED_APPS"/> <!-- 获取已安装应用列表 -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" /> <!-- 允许程序查询所有安装的应用 -->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/> <!-- 允许程序请求删除其他应用 -->
+
+
+    <!-- 🖥️ 前台服务相关权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/> <!-- 允许程序使用前台服务 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/> <!-- 允许前台服务同步数据 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/> <!-- 允许前台服务使用媒体投影 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/> <!-- 允许前台服务的特殊用途 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/> <!-- 允许程序显示通知 -->
+
+    <!-- 📺 系统相关权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> <!-- 允许程序显示系统级别的窗口 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/> <!-- 允许程序禁用键盘锁 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" /> <!-- 允许程序修改系统设置 -->
+    <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 允许程序读取系统日志 -->
+
+
+    <!-- 📦 Termux/Root相关权限 -->
+    <uses-permission android:name="com.termux.permission.RUN_COMMAND"/> <!-- 允许程序调用 Termux 执行命令 -->
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER"/> <!-- 允许程序获取 root 权限 -->
+
+    <!-- ⏰ 闹钟与自启动权限 -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" /> <!-- 允许程序调度精确闹钟 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/> <!-- 允许程序在设备开机时自动启动 -->
+
+    <!-- 🔔 通知相关权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/> <!-- 允许程序访问通知策略 -->
+
+    <!-- 📳 设备控制权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/> <!-- 允许程序控制设备震动 -->
+
+
+    <!-- 📦 USB 权限 -->
+    <uses-permission android:name="android.permission.USB_PERMISSION"/> <!-- 允许程序访问 USB 设备 -->
+    <uses-permission android:name="android.permission.USB_PERMISSION_ACCESSORY"/> <!-- 允许程序访问 USB 外设 -->
+    <uses-permission android:name="android.permission.USB_ACCESS" /> <!-- 允许程序访问 USB 接口（自定义权限） -->
+    <uses-feature android:name="android.hardware.usb.host"/> <!-- 声明支持 USB Host 功能 -->
+
+    <!-- 📡 蓝牙相关权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/> <!-- 允许程序使用蓝牙 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/> <!-- 允许程序管理蓝牙连接 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/> <!-- 允许程序连接蓝牙设备 -->
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/> <!-- 声明支持 BLE（低功耗蓝牙）功能 -->
+
+    <!-- 🔋 电池优化 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/> <!-- 请求忽略电池优化限制 -->
+
+    <!-- 📦 其他 -->
+    <uses-permission android:name="android:project_media"/> <!-- 自定义媒体相关权限（自定义用途） -->
+
+    <!-- 📞 电话功能声明 -->
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/> <!-- 声明应用是否需要电话功能 -->
+
+    <uses-permission android:name="com.termux.permission.RUN_COMMAND" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
+    <application
+        android:name=".CoreApp"
+        android:largeHeap="true"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <activity
+            android:name=".activity.LoadingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <service
+            android:name=".service.AccessibilityService"
+            android:description="@string/base_ser_desc"
+            android:label="@string/base_ser_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_config" />
+        </service>
+
+        <service android:name=".service.KeyboardService"
+            android:label="@string/input_name"
+            android:permission="android.permission.BIND_INPUT_METHOD"
+            android:exported="true"
+            android:enabled="true"
+            android:foregroundServiceType="mediaProjection"
+            android:windowSoftInputMode="stateAlwaysVisible">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/keyboard_config"/>
+        </service>
+        <service android:name=".service.ForegroundService"   android:foregroundServiceType="dataSync"/>
+        <service android:name=".service.CaptureForegroundService"   android:foregroundServiceType="mediaProjection"  android:permission="android.permission.FOREGROUND_SERVICE" />
+        <activity
+            android:name=".activity.RecordScreenActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:enabled="true"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".activity.StubWebActivity$Keep"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:enabled="true"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            >
+        </activity>
+
+        <activity
+            android:name=".activity.BitmapDisplayActivity"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            android:enabled="true"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            > </activity>
+
+    </application>
+
+
+</manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_floating"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"> <!-- 添加圆角背景 -->
+
+    <FrameLayout
+        android:id="@+id/layout_drag"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:background="@color/black">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_close"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/black"
+            android:src="@drawable/x"
+            android:text="clos" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="日志"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_background"
+        android:scrollbars="vertical"/>
+</LinearLayout>

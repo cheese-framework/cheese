@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/cheese_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/cheese_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Cheese">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+    </application>
+
+</manifest>

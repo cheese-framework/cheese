@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <!-- 可以在这里添加特定域名或IP地址的规则 -->
+    </base-config>
+</network-security-config>

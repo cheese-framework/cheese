@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Cheese</string>
+    <string name="accessibility_service_label">我的无障碍服务</string>
+    <string name="description">Test</string>
+    <string name="fore_service">保活服务</string>
+    <string name="cap_fore_service">录屏服务</string>
+    <string name="base_ser_desc">Cheese自动化测试框架</string>
+    <string name="base_ser_name">cheese</string>
+    <string name="input_name">Cheese输入法</string>
+    <string name="subtype_en_US">中国</string>
+    <string name="black_box_service_name">:black</string>
+    <string name="version_code">2</string> <!-- 版本号 -->
+    <string name="version_name">1.1.0</string> <!-- 版本名称 -->
+</resources>
